@@ -1,6 +1,8 @@
 # Project specific
 *.db
 *.ipynb
+*.vscode
+*.github
 *.csv
 **/google_credentials.json
 **/workdir
@@ -220,6 +222,17 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
+
+# General
+.DS_Store
+__MACOSX/
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
 # Streamlit
 .streamlit/secrets.toml
 
@@ -236,6 +249,8 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
