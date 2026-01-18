@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "etlite"
-version = "0.1.0"
+version = "0.3.0"
 description = "A lightweight library for creating local ETL pipelines"
 readme = "README.md"
 license = {text = "MIT"}
