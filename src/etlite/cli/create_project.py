@@ -22,20 +22,20 @@ class Project:
 
     def _create_dirs(self):
         self._path.mkdir(parents=True)
-        (self._path / "sql_queries").mkdir()
-        (self._path / "custom_trx").mkdir()
+        # (self._path / "sql_queries").mkdir()
     
     def _create_files(self):
-        (self._path / "pipeline_config.py").write_text(content.gen_custom_transformation(self._name))
-        (self._path / "pipeline.py").write_text(content.gen_custom_transformation(self._name))
+        (self._path / "pandas_trx.py").write_text(content.gen_pandas_trx(self._name))
+        (self._path / "pipeline_config.py").write_text(content.gen_pipeline_config(self._name))
+        (self._path / "pipeline.py").write_text(content.gen_pipeline(self._name))
         (self._path / ".env").write_text(content.gen_env())
 
     def _show_files_structure(self):
         print(f"Successfully created project '{self._name}' at {self._path.cwd()}")
         print(f"\nProject structure:")
         print(f"  {self._name}/")
-        print(f"    ├── sql_queries/")
-        print(f"    ├── custom_trx/")
+        # print(f"    ├── sql_queries/")
+        print(f"    ├── pandas_trx.py")
         print(f"    ├── pipeline_config.py")
         print(f"    ├── pipeline.py")
         print(f"    └── .env")
