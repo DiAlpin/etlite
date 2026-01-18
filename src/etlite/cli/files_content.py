@@ -22,8 +22,34 @@ def gen_env() -> str:
     return "\n".join(content)
 
 
-def gen_custom_transformation(project):
+def gen_pandas_trx(project):
     return f"""
-from {project}.custom_transformers import 
+import numpy as np
 
+
+
+def dummy_pandas_trx(df):
+    # define your pandas transformation
+    return df
+"""
+
+def gen_pipeline_config(project):
+    return f"""
+import etlite.models as m
+from pandas_trx import dummy_pandas_trx
+
+
+
+input_extractor_model = m.LocalExtractorModel(path='/my/path')
+dummy_trx_model = m.PandasCustomTransformerModel(transformation_func=dummy_pandas_trx)
+"""
+
+def gen_pipeline(project):
+    return f"""
+import etlite as etl
+import pipeline_config as cfg 
+
+
+
+dummy_data = etl.Extract(cfg.input_extractor_model).transform(cfg.dummy_trx_model).run() 
 """
