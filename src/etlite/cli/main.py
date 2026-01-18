@@ -1,11 +1,19 @@
 
 import sys
 import argparse
+from importlib.metadata import version, PackageNotFoundError
 
 from etlite.cli.create_project import Project
 
 
-__version__ = "0.1.0"
+
+# get official package version
+try:
+    __version__ = version("etlite")
+except PackageNotFoundError:
+    __version__ = "xx.xx.xx"
+
+
 
 def display_version():
     """Display the version information."""
