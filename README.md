@@ -1,10 +1,12 @@
 # ETLite
 
-A lightweight Python library for creating local ETL (Extract, Transform, Load) pipelines. ETLite provides a simple, declarative API for building data pipelines with support for multiple data sources, transformations, and destinations. Built on PyArrow for efficient data processing, it enables you to extract data from various sources (S3, local files, HTML, TradingView), apply transformations using pandas, PyArrow or SQL through DuckDB, blend multiple datasets, and load results to destinations like Google Sheets, AWS S3, SQL DB or local.
+![Python 3.12](https:/img.shields.io/badge/python-3.12%B-blue)
+
+A lightweight Python library for building local ETL (Extract, Transform, Load) pipelines with a simple, declarative API. Extract data from multiple sources (S3, local files, HTML, TradingView), transform using pandas, PyArrow, or SQL (DuckDB), and load to destinations like Google Sheets, S3, or databases. Built on PyArrow for efficient processing.
 
 ## Features
 
-- **Multiple Extractors**: S3, local files, HTML scraping, TradingView data
+- **Multiple Extractors**: S3, local files, HTML scraping, TradingView and more
 - **Flexible Transformations**: Built-in transformers (rename, filter, fillna, keep columns) and custom pandas transformations
 - **Data Blending**: Merge and join multiple datasets
 - **Loaders**: Export data to Google Sheets and more
@@ -12,11 +14,6 @@ A lightweight Python library for creating local ETL (Extract, Transform, Load) p
 - **CLI Tool**: Quick project setup with `etl init`
 
 ## Installation
-
-ETLite requires Python 3.12 or higher.
-
-
-### Install from Source
 
 ```bash
 git clone https://github.com/DiAlpin/etlite.git
@@ -34,7 +31,7 @@ First, activate the Python environment where ETLite is installed:
 # For virtualenv/venv
 source venv/bin/activate  # On macOS/Linux
 # or
-venv\Scripts\activate  # On Windows
+venv\Scripts\activate     # On Windows
 
 # For conda
 conda activate your_env_name
@@ -42,7 +39,7 @@ conda activate your_env_name
 
 ### 2. Create a New Project
 
-Once your environment is activated, navigate to any location where you want to create your pipeline project and use the CLI to scaffold a new ETL project:
+Once your environment is activated, navigate to any location where you want to create your pipeline project and use the CLI to create a new ETL project:
 
 ```bash
 cd /path/to/your/pipelines
@@ -59,6 +56,12 @@ my_etl_project/
 └── .env                    # Environment variables (configure this!)
 ```
 
+### 3. Execute pipeline
+
+```bash
+cd my_etl_pipeline
+python pipeline.py
+```
 
 ## Available Components
 
@@ -82,15 +85,3 @@ my_etl_project/
 
 ### Loaders
 - `GoogleSheetsLoaderModel` - Load data to Google Sheets
-
-## License
-
-MIT License - see LICENSE file for details.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## Author
-
-Daniel Broboana (daniel.broboana@gmail.com)
