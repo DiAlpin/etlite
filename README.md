@@ -7,7 +7,7 @@ A lightweight Python library for building local ETL (Extract, Transform, Load) p
 ## Features
 
 - **Extractors**: S3, local files, HTML scraping, TradingView and more
-- **Transformations**: Built-in transformers (rename, filter, fillna, keep columns) and custom pandas transformations
+- **Transformations**: Built-in transformers and custom pandas/SQL transformations
 - **Data Blending**: Merge and join multiple datasets
 - **Loaders**: Export data to Google Sheets and more
 - **Type-Safe Configuration**: Pydantic models for pipeline configuration
