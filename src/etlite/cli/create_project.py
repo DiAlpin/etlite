@@ -35,10 +35,10 @@ class Project:
         print(f"\nProject structure:")
         print(f"  {self._name}/")
         # print(f"    ├── sql_queries/")
-        print(f"    ├── pandas_trx.py")
-        print(f"    ├── pipeline_config.py")
-        print(f"    ├── pipeline.py")
-        print(f"    └── .env")
+        print(f"    ├── pandas_trx.py\t\t# Custom pandas transformations")
+        print(f"    ├── pipeline_config.py\t# Pipeline configuration models")
+        print(f"    ├── pipeline.py\t\t# Main pipeline script")
+        print(f"    └── .env\t\t\t# Environment variables")
         
         # Important reminder
         print("\n" + "="*80)
