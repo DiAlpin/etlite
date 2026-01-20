@@ -1,6 +1,6 @@
 # ETLite
 
-![Python 3.12](https:/img.shields.io/badge/python-3.12%B-blue)
+![Python 3.12](https://img.shields.io/badge/python-3.12%2B-blue)
 
 A lightweight Python library for building local ETL (Extract, Transform, Load) pipelines with a simple, declarative API. Extract data from multiple sources (S3, local files, HTML, TradingView), transform using pandas, PyArrow, or SQL (DuckDB), and load to destinations like Google Sheets, S3, or databases. Built on PyArrow for efficient processing.
 
@@ -58,6 +58,9 @@ my_etl_project/
 
 ### 3. Execute pipeline
 
+To ensure that environment variables are correctly loaded from the 
+`.env` file, execute the pipeline from the project's root directory:
+
 ```bash
 cd my_etl_pipeline
 python pipeline.py
@@ -85,3 +88,9 @@ python pipeline.py
 
 ### Loaders
 - `GoogleSheetsLoaderModel` - Load data to Google Sheets
+
+**Note on Roadmap:** New components, including additional extractors, transformation modules and additional loaders, are currently under development to further improve pipeline flexibility.
+
+## Background
+
+ETLite started as a fun project for the rapid prototyping of data pipelines used in quantitative analysis.
