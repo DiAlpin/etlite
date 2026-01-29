@@ -18,8 +18,9 @@ A lightweight Python library for building local ETL (Extract, Transform, Load) p
 ```bash
 git clone https://github.com/DiAlpin/etlite.git
 cd etlite
-pip install .
+pip install -e .
 ```
+**Note**: The `-e` flag (or `--editable`) installs the package in editable mode allowing you to make changes to the source code and have them immediately reflected without needing to reinstall the package.
 
 ## Quick Start
 
@@ -30,10 +31,9 @@ First, activate the Python environment where ETLite is installed:
 ```bash
 # For virtualenv/venv
 source venv/bin/activate  # On macOS/Linux
-# or
 venv\Scripts\activate     # On Windows
 
-# For conda
+# For conda environment
 conda activate your_env_name
 ```
 
