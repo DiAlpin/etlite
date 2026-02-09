@@ -66,6 +66,16 @@ cd my_etl_pipeline
 python pipeline.py
 ```
 
+## Examples
+
+For a detailed walkthrough of building a real-world pipeline, see the [Portfolio Management Example](docs/examples/portfolio_management.md).
+
+You can also initialize a pre-configured example project to explore the features by running:
+
+```bash
+etl init-example
+```
+
 ## Available Components
 
 ### Extractors
