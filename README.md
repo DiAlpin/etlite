@@ -1,5 +1,7 @@
 # ETLite
 
+![title](docs/ETLite_logo.jpg)
+
 ![Python 3.12](https://img.shields.io/badge/python-3.12%2B-blue)
 
 A lightweight Python library for building local ETL (Extract, Transform, Load) pipelines with a simple, declarative API. Extract data from multiple sources (S3, local files, HTML, TradingView), transform using pandas, PyArrow, or SQL (DuckDB), and load to destinations like Google Sheets, S3, or databases. Built on PyArrow for efficient processing.
