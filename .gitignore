@@ -6,7 +6,7 @@
 *.csv
 **/google_credentials.json
 **/workdir
-
+**/portfolio_management
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
