@@ -4,7 +4,7 @@ import argparse
 from importlib.metadata import version, PackageNotFoundError
 
 from etlite.cli.create_project import Project
-
+from etlite.cli.create_example import Example
 
 
 # get official package version
@@ -29,6 +29,16 @@ def create_project(name: str, path: str = "."):
     except Exception as e:
         print(f"Error creating project: {e}", file=sys.stderr)
         sys.exit(1)
+        
+def create_example(name: str, path: str = "."):
+    try:
+        proj = Example(name, path)
+        proj.init()
+        
+    except Exception as e:
+        print(f"Error creating example project: {e}", file=sys.stderr)
+        sys.exit(1)
+
 
 
 
@@ -67,10 +77,24 @@ def main():
         default='.',
         help='Base path where project will be created (default: current directory)'
     )
+    
+    example_parser = subparsers.add_parser(
+        'init-example', 
+        help='Initialize Portfolio Management Pipeline Example'
+    )
+    example_parser.add_argument(
+        '-p', '--path',
+        type=str,
+        default='.',
+        help='Base path where project will be created (default: current directory)'
+    )
+    
     args = parser.parse_args()
     
     if args.command == 'init':
         create_project(args.name, args.path)
+    elif args.command == 'init-example':
+        create_example('portfolio_management', args.path)
     elif args.command is None:
         parser.print_help()
         sys.exit(0)
